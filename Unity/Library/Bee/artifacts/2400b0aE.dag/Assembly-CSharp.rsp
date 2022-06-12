@@ -316,9 +316,9 @@
 -r:"/home/yfrl/Unity/Hub/Editor/2021.3.2f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll"
 -r:"/home/yfrl/Unity/Hub/Editor/2021.3.2f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll"
 -r:"/home/yfrl/Unity/Hub/Editor/2021.3.2f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
--r:"/home/yfrl/Unity/multi-robot-scheduling-unity/My project/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
--r:"/home/yfrl/Unity/multi-robot-scheduling-unity/My project/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
--r:"/home/yfrl/Unity/multi-robot-scheduling-unity/My project/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"/home/yfrl/Unity/multi-robot-scheduling-unity-ros/Unity/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"/home/yfrl/Unity/multi-robot-scheduling-unity-ros/Unity/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
+-r:"/home/yfrl/Unity/multi-robot-scheduling-unity-ros/Unity/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
@@ -345,6 +345,8 @@
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.VisualStudio.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Packages/Elenesski Generic Move Camera/GenericMoveCamera.cs"
+"Assets/Packages/Elenesski Generic Move Camera/GenericMoveCameraInputs.cs"
 "Assets/Scripts/agent.cs"
 -langversion:9.0
 
