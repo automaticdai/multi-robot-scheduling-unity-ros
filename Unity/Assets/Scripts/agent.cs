@@ -24,7 +24,7 @@ public class agent : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
 
-        rigidbodyComponent.AddForce(new Vector3(1.0f, 0f, 0f), ForceMode.VelocityChange);
+        rigidbodyComponent.AddForce(new Vector3(2.0f, 0f, 0f), ForceMode.VelocityChange);
 
     }
 
