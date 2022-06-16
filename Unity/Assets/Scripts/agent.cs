@@ -8,12 +8,16 @@ public class agent : MonoBehaviour
     [SerializeField] private LayerMask playerMask;    
     private bool jumpKeyWasPressed;
     private float horizontalInput;
+    private float moveSpeed;
+    private float moveDirection;
     private Rigidbody rigidbodyComponent;
 
 
     // Start is called before the first frame update
     void Start() {
         rigidbodyComponent = GetComponent<Rigidbody>();
+        moveSpeed = Random.Range(-10f, 10f);
+        moveDirection = Random.Range(-1.0f, 1.0f) * Mathf.PI; 
     }
 
     // Update is called once per frame
@@ -24,21 +28,22 @@ public class agent : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
 
-        rigidbodyComponent.AddForce(new Vector3(2.0f, 0f, 0f), ForceMode.VelocityChange);
-
     }
 
     private void FixedUpdate() {
-        rigidbodyComponent.velocity = new Vector3(horizontalInput, rigidbodyComponent.velocity.y, 0);
+
+        //rigidbodyComponent.AddForce(new Vector3(moveSpeed * Mathf.Sin(moveDirection), 0f, moveSpeed * Mathf.Cos(moveDirection)), ForceMode.VelocityChange);
+        rigidbodyComponent.velocity = new Vector3(moveSpeed * Mathf.Sin(moveDirection), 0f, moveSpeed * Mathf.Cos(moveDirection));
+        // rigidbodyComponent.velocity = new Vector3(horizontalInput, rigidbodyComponent.velocity.y, 0);
     
         // if (Physics.OverlapSphere(groundCheckTransform.position, 0.1f, playerMask).Length == 0){
         //     return;
         // }
 
-        if (jumpKeyWasPressed) {
-            rigidbodyComponent.AddForce(Vector3.up * 5, ForceMode.VelocityChange);
-            jumpKeyWasPressed = false;
-        }
+        // if (jumpKeyWasPressed) {
+        //     rigidbodyComponent.AddForce(Vector3.up * 5, ForceMode.VelocityChange);
+        //     jumpKeyWasPressed = false;
+        // }
 
     }
 }
