@@ -28,3 +28,8 @@
 *.dll    binary
 *.pdf    binary
 *.unitypackage binary
+
+# Vendored Asset Store code: keep the bytes exactly as shipped, including CRLF.
+# These are never hand-edited or merged, so normalising them is pure churn.
+Unity/Assets/Packages/** -text
+Assets/Packages/** -text
