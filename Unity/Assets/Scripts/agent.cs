@@ -20,10 +20,10 @@ public class agent : MonoBehaviour
         // Drive the horizontal plane only. The vertical component is left to the
         // solver, otherwise zeroing it every step cancels out gravity and the
         // robot never settles on the floor.
-        Vector3 velocity = rigidbodyComponent.velocity;
+        Vector3 velocity = rigidbodyComponent.linearVelocity;
         velocity.x = moveSpeed * Mathf.Sin(moveDirection);
         velocity.z = moveSpeed * Mathf.Cos(moveDirection);
-        rigidbodyComponent.velocity = velocity;
+        rigidbodyComponent.linearVelocity = velocity;
     }
 
     private void OnCollisionEnter(Collision collision) {
