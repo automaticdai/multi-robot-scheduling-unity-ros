@@ -1,0 +1,30 @@
+# Unity YAML assets are text, but must never be line-ending-normalised or
+# three-way merged by git's default driver. Merging them needs UnityYAMLMerge:
+#   git config merge.unityyamlmerge.driver \
+#     '<UnityInstall>/Editor/Data/Tools/UnityYAMLMerge merge -p %O %A %B %A'
+*.unity     text eol=lf merge=unityyamlmerge
+*.prefab    text eol=lf merge=unityyamlmerge
+*.mat       text eol=lf merge=unityyamlmerge
+# .asset can be binary (TerrainData, some settings assets), so no text= here.
+*.asset     merge=unityyamlmerge
+*.meta      text eol=lf merge=unityyamlmerge
+*.controller text eol=lf merge=unityyamlmerge
+*.anim      text eol=lf merge=unityyamlmerge
+*.physicMaterial text eol=lf merge=unityyamlmerge
+
+*.cs        text diff=csharp
+*.json      text
+*.md        text
+
+# Binary assets: never diffed, never normalised.
+*.png    binary
+*.jpg    binary
+*.psd    binary
+*.fbx    binary
+*.obj    binary
+*.wav    binary
+*.mp3    binary
+*.ttf    binary
+*.dll    binary
+*.pdf    binary
+*.unitypackage binary
